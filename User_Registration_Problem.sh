@@ -18,7 +18,7 @@ function validation()
 #Function To Validate First Name
 function firstNameValidation()
 {
-   fName=^[A-Z]{1}[a-z]{2,}$
+   fName=^[A-Z]{1}[A-Za-z]{2,}$
    while true
    do
       read -p "Enter First Name : " firstName
@@ -30,7 +30,7 @@ firstNameValidation
 #Function To Validate Last Name
 function lastNameValidation()
 {
-   lName=^[A-Z]{1}[a-z]{2,}$
+   lName=^[A-Z]{1}[A-Za-z]{2,}$
    while true
    do
       read -p "Enter Last Name : " lastName
@@ -39,3 +39,14 @@ function lastNameValidation()
 }
 lastNameValidation
 
+#Function To Validate Email Address
+function emailAddressValidation()
+{
+   emailId=^[a-zA-Z0-9]+[._%+-]*@[a-zA-Z0-9.]+[.][a-zA-Z]{2,4}$
+   while true
+   do
+      read -p "Enter Email Id : " emailAddress
+      validation $emailAddress $emailId
+   done
+}
+emailAddressValidation
