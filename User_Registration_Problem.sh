@@ -27,3 +27,15 @@ function firstNameValidation()
 }
 firstNameValidation
 
+#Function To Validate Last Name
+function lastNameValidation()
+{
+   lName=^[A-Z]{1}[a-z]{2,}$
+   while true
+   do
+      read -p "Enter Last Name : " lastName
+      validation $lastName $lName
+   done
+}
+lastNameValidation
+
