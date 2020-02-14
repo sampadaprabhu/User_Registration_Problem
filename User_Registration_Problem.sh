@@ -79,8 +79,8 @@ mobileNumberValidation
 #Function To Validate Password
 function passwordValidation()
 {
-   password=^[A-Za-z0-9+._-%]{8,}$
-   while true
+   password="^[A-Z]{1,}[A-Za-z0-9+._-%]{7,}$"
+	while true
    do
       read -p "Enter Password : " pass
       validation $pass $password
