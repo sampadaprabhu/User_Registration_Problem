@@ -50,3 +50,28 @@ function emailAddressValidation()
    done
 }
 emailAddressValidation
+
+#Funtion To Matching Pattern With Given Input
+function validationForMobileNumber()
+{
+   letter=$1' '$2
+   pattern=$3
+   if [[ $letter =~ $pattern ]]
+   then
+      echo "$letter is Valid!!"
+      break
+   else
+      echo "Oops!!.$letter is invalid...please Re-enter it!!"
+   fi
+}
+#Function To Validate Mobile Number
+function mobileNumberValidation()
+{
+   mobileNo=^[+]?[0-9]{2}[[:space:]][0-9]{10}$
+   while true
+   do
+      read -p "Enter Mobile Number With Your Country Code : " mobileNumber
+      validationForMobileNumber $mobileNumber $mobileNo
+   done
+}
+mobileNumberValidation
