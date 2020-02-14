@@ -25,7 +25,7 @@ function firstNameValidation()
       validation $firstName $fName
    done
 }
-#firstNameValidation
+firstNameValidation
 
 #Function To Validate Last Name
 function lastNameValidation()
@@ -37,7 +37,7 @@ function lastNameValidation()
       validation $lastName $lName
    done
 }
-#lastNameValidation
+lastNameValidation
 
 #Function To Validate Email Address
 function emailAddressValidation()
@@ -49,7 +49,7 @@ function emailAddressValidation()
       validation $emailAddress $emailId
    done
 }
-#emailAddressValidation
+emailAddressValidation
 
 #Funtion To Matching Pattern With Given Input
 function validationForMobileNumber()
@@ -74,12 +74,12 @@ function mobileNumberValidation()
       validationForMobileNumber $mobileNumber $mobileNo
    done
 }
-#mobileNumberValidation
+mobileNumberValidation
 
 #Function To Validate Password
 function passwordValidation()
 {
-   password="^[A-Z]{1,}[0-9]{1,}[A-Za-z0-9+._-%]{6,}$"
+   password="^[A-Z]{1,}[0-9]{1,}[+_-%@]{1}[A-Za-z0-9+._-%]{5,}$"
 	while true
    do
       read -p "Enter Password : " pass
